@@ -2,7 +2,6 @@ package hello.hellospring.aop;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 // since AOP is not a standardized code, it is recommended to register directly to Bean
 // @Component <- unwelcome

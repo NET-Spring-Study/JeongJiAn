@@ -23,21 +23,21 @@ public class MemberService {
      * Sign up
      */
     public Long join(Member member) {
-//        // Check duplicate member with the same name
-//        validateDuplicateMember(member);
-//        memberRepository.save(member);
-//        return member.getId();
+        // Check duplicate member with the same name
+        validateDuplicateMember(member);
+        memberRepository.save(member);
+        return member.getId();
 
-        long start = System.currentTimeMillis();
-        try {
-            validateDuplicateMember(member);
-            memberRepository.save(member);
-            return member.getId();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println("join " + timeMs + "ms");
-        }
+//        long start = System.currentTimeMillis();
+//        try {
+//            validateDuplicateMember(member);
+//            memberRepository.save(member);
+//            return member.getId();
+//        } finally {
+//            long finish = System.currentTimeMillis();
+//            long timeMs = finish - start;
+//            System.out.println("join " + timeMs + "ms");
+//        }
     }
 
     private void validateDuplicateMember (Member member) {
